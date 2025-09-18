@@ -5,37 +5,36 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" /> 
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-xl navbar-light bg-light">
-  			<div class="container-fluid">
-    			<a class="navbar-brand" href="#">Ryan Yen's Taskbar</a>
-    			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBasic" aria-controls="navbarBasic" aria-expanded="false" aria-label="Toggle navigation">
-      				<span class="navbar-toggler-icon"></span>
-    			</button>
-    			<div class="collapse navbar-collapse" id="navbarBasic">
-      				<ul class="navbar-nav me-auto mb-2 mb-xl-0">
-        				<li class="nav-item">
-          					<a class="nav-link active" aria-current="page" href="#">Home</a>
-        				</li>
-        				<li class="nav-item">
-          					<a class="nav-link" href="hobbies.html">Hobbies</a>
-        				</li>
-      				</ul>
-    
-    			</div>
-  			</div>
-		</nav>
+		<div id="navbar-container"></div>
 		<header class="container-fluid bg-primary text-white p-5">
 		<h1>Ryan Yen's VU Homepage</h1>
 	</header>
-	</body>
 
 <main class="container mt-4">
 	<p>Welcome to my Villanova homepage with bootstrap styling! My name is Ryan Yen and I am a senior computer engineer here in Bryn Mawr, PA. I enjoy surfing, playing soccer, and working on computer hardware/software. I also love a good joke! I'm originally from Bethlehem Pennsylvania so I'm definitely also a Philly sports fan. I have an older brother, a younger sister, and a plethora of pets! Thanks for stopping by! </p>
-	<img src="../resources/img/Ryan Yen Headshot.jpg" alt="Ryan Yen's Face" width="220px"
-	class="img-fluid rounded border-3 border-dark" width="220">
-	<div>
+	<div id="photo-container" class="mb-3">
+		<img src="../resources/img/Ryan Yen Headshot.jpg" alt="Ryan Yen's Face" width="220px" class="img-fluid rounded border-3 border-dark" width="220">
+	</div>
+	<div id="button-container" class="mb-3">
+		<button type="button" id="toggle-photo" class="btn btn-primary">  <!-- Found this primary button class in bootstrap website -->
+			Hide My Face!
+		</button>
+	</div>
 	<a href="https://www1.villanova.edu/university/liberal-arts-sciences/programs/computing-sciences.html">Villanova Computing Sciences Department Homepage Link</a>
+	<section class="mt-5">
+		<h3>My Favorite Artists</h3>
+		<p>Click the button below to add musicians to the page!</p>
+		<button id="add-artist">Add artists</button>
+		<div id="artists-container"></div>
+	</section>
+</main>
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" ></script> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" ></script> 
+<script src="../resources/js/script.js"></script>
+<script src="../resources/js/navbar.js"></script>
+<script>
+	loadNavbar(); // Call the function to load the navbar
+</script>
+</body>
 </html> 
 
